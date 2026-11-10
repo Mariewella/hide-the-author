@@ -1,13 +1,28 @@
 <!doctype html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hide the Author</title>
+    <link rel="stylesheet" href="./style.css" />
     <meta name="manifest.type" content="browser_action" />
   </head>
   <body>
-    <div id="app"></div>
+    <main class="popup">
+      <header class="popup__header">
+        <img src="/icon/32.png" alt="" width="24" height="24" />
+        <h1>Hide the Author</h1>
+      </header>
+
+      <label class="switch-row" for="enabled">
+        <span>
+          <span class="switch-row__title">Filter</span>
+          <span class="switch-row__hint" id="status">Zapnutý</span>
+        </span>
+        <input type="checkbox" id="enabled" class="switch-input" role="switch" checked />
+        <span class="switch-track" aria-hidden="true"></span>
+      </label>
+    </main>
     <script type="module" src="./main.ts"></script>
   </body>
 </html>
